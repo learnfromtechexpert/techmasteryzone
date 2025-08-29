@@ -5,6 +5,7 @@
   <title>Tech Mastery Zone</title>
   <meta name="description" content="Expert-led training and consulting in SnapLogic, cloud integration, and data engineering.">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
     :root {
@@ -30,6 +31,11 @@
       color: var(--white);
       padding: 50px 20px;
       text-align: center;
+    }
+
+    header img {
+      height: 60px;
+      margin-bottom: 10px;
     }
 
     nav {
@@ -81,7 +87,9 @@
       border-radius: 10px;
       box-shadow: 0 2px 10px rgba(0,0,0,0.1);
       margin-bottom: 40px;
-      animation: fadeIn 0.8s ease-in;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: slideUp 0.6s ease-out forwards;
     }
 
     section:nth-child(even) {
@@ -94,16 +102,24 @@
     }
 
     ul {
-      padding-left: 20px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+      gap: 20px;
+      padding-left: 0;
+      list-style: none;
     }
 
     li {
-      margin-bottom: 12px;
-      transition: background-color 0.3s ease;
+      background-color: #ffffff;
+      padding: 10px;
+      border-radius: 6px;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+      transition: background-color 0.3s ease, box-shadow 0.3s ease;
     }
 
     li:hover {
       background-color: #e6f7ff;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
     }
 
     .contact {
@@ -125,17 +141,27 @@
       border-radius: 5px;
       text-decoration: none;
       margin-top: 20px;
-      transition: transform 0.2s ease;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
     }
 
     a.cta-button:hover {
       transform: scale(1.05);
+      box-shadow: 0 0 10px rgba(0,180,216,0.6);
       background-color: #0096c7;
     }
 
-    @keyframes fadeIn {
-      from {opacity: 0;}
-      to {opacity: 1;}
+    .sticky-cta {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 999;
+    }
+
+    @keyframes slideUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
 
     @media (max-width: 600px) {
@@ -146,11 +172,15 @@
       main {
         padding: 20px;
       }
+      ul {
+        grid-template-columns: 1fr;
+      }
     }
   </style>
 </head>
 <body>
   <header>
+    <img src="logo.png" alt="Tech Mastery Zone logo">
     <h1>Welcome to Tech Mastery Zone</h1>
     <p>Your gateway to mastering modern technologies</p>
   </header>
@@ -192,7 +222,7 @@
       <ul>
         <li><strong>SnapLogic Fundamentals</strong> – Understand the architecture, key components, and design principles</li>
         <li><strong>Pipeline Development</strong> – Build and optimize pipelines using Snap Packs, transformations, and error handling</li>
-        <li><strong>Diverse Data Handling</strong> – Work with a variety of data formats including structured (databases, CSVs) and unstructured (JSON, XML, log files), and learn how SnapLogic processes, transforms, and integrates them seamlessly</li>
+        <li><strong>Diverse Data Handling</strong> – Work with a variety of data formats including structured (databases, CSVs) and unstructured (JSON, XML, log files), and learn how SnapLogic processes, transforms, and integrates them seamlessly</li>   
         <li><strong>Integration Scenarios</strong> – Connect SnapLogic to a wide range of enterprise applications including CRM systems, ERP platforms, REST APIs, relational databases, and both on-premise and cloud-based solutions</li>
         <li><strong>Hands-On Labs</strong> – Practice what you learn through guided, real-world exercises that simulate enterprise scenarios. Our labs are designed to build confidence, reinforce concepts, and prepare you for actual project delivery</li>
       </ul>
@@ -206,7 +236,6 @@
         <li><strong>Proven Track Record</strong> – Successfully delivered training programs for corporate teams and individual professionals across industries</li>
         <li><strong>Tailored Learning</strong> – We adapt our content to suit diverse learner needs—from freshers to experienced architects</li>
         <li><strong>Exclusive Hands-On Labs</strong> – Unlike most platforms, we provide guided, real-world lab exercises that simulate enterprise scenarios and build true project readiness</li>
-        <li><strong>Consulting-Grade Expertise</
         <li><strong>Consulting-Grade Expertise</strong> – Our trainers are practicing consultants who bring field-tested insights into every module</li>
         <li><strong>End-to-End Support</strong> – From interview prep to project delivery, we’re your strategic partner in career growth</li>
       </ul>
@@ -216,8 +245,13 @@
       <h2><i class="fas fa-envelope"></i> Contact</h2>
       <p>Email: <a href="mailto:ssai@example.com" tabindex="0">ssai@example.com</a></p>
       <p>LinkedIn: <a href="https://linkedin.com/in/yourprofile" target="_blank" tabindex="0">yourprofile</a></p>
+      <p><strong>Alt text note:</strong> If you add a logo or team photo, include <code>alt="Team photo of Tech Mastery Zone"</code> for accessibility.</p>
     </section>
   </main>
+
+  <div class="sticky-cta">
+    <a href="#contact" class="cta-button">Talk to Us</a>
+  </div>
 
   <footer>
     &copy; 2025 Tech Mastery Zone. Built with ❤️ by ssai.
