@@ -5,6 +5,7 @@
   <title>Tech Mastery Zone</title>
   <meta name="description" content="Expert-led training and consulting in SnapLogic, cloud integration, and data engineering.">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
     :root {
       --primary: #0077b6;
@@ -21,7 +22,7 @@
       padding: 0;
       background-color: var(--bg);
       color: var(--text);
-      line-height: 1.6;
+      line-height: 1.8;
     }
 
     header {
@@ -54,6 +55,20 @@
       border-radius: 5px;
     }
 
+    .hero {
+      background: url('banner.jpg') center/cover no-repeat;
+      height: 300px;
+      border-radius: 10px;
+      margin: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 28px;
+      font-weight: bold;
+      text-shadow: 1px 1px 4px rgba(0,0,0,0.6);
+    }
+
     main {
       padding: 40px 20px;
       max-width: 1000px;
@@ -62,15 +77,20 @@
 
     section {
       background-color: var(--white);
-      padding: 30px;
+      padding: 40px;
       border-radius: 10px;
       box-shadow: 0 2px 10px rgba(0,0,0,0.1);
       margin-bottom: 40px;
       animation: fadeIn 0.8s ease-in;
     }
 
-    h1, h2 {
-      margin-top: 0;
+    section:nth-child(even) {
+      background-color: #f7fbff;
+    }
+
+    h2 {
+      font-size: 28px;
+      margin-bottom: 15px;
     }
 
     ul {
@@ -143,15 +163,19 @@
     <a href="#contact">Contact</a>
   </nav>
 
+  <div class="hero" role="banner" aria-label="Empowering Tech Learners Worldwide">
+    Empowering Tech Learners Worldwide
+  </div>
+
   <main>
     <section id="who">
-      <h2>Who We Are</h2>
+      <h2><i class="fas fa-users"></i> Who We Are</h2>
       <p>We are a group of seasoned technical experts with deep experience in data engineering, cloud integration, and enterprise architecture. Our mission is to deliver high-impact training on niche and in-demand technologies—starting with SnapLogic and expanding into Snowflake, Azure Data Factory, Kafka, and beyond.</p>
       <p>We believe in clarity, scalability, and real-world relevance. Whether you're just starting out or looking to deepen your expertise, you're in the right zone.</p>
     </section>
 
     <section id="offer">
-      <h2>What We Offer</h2>
+      <h2><i class="fas fa-briefcase"></i> What We Offer</h2>
       <p>At Tech Mastery Zone, we go beyond traditional training to provide end-to-end support for learners and professionals navigating the tech landscape. Our services include:</p>
       <ul>
         <li><strong>Expert-Led Training</strong> – Structured, hands-on learning experiences designed and delivered by seasoned professionals across a range of modern technologies</li>
@@ -163,7 +187,7 @@
     </section>
 
     <section id="training">
-      <h2>Current Training</h2>
+      <h2><i class="fas fa-chalkboard-teacher"></i> Current Training</h2>
       <p>We are currently offering in-depth training on <strong>SnapLogic</strong>, a powerful integration platform used for building scalable data pipelines and automating workflows across cloud and on-prem systems.</p>
       <ul>
         <li><strong>SnapLogic Fundamentals</strong> – Understand the architecture, key components, and design principles</li>
@@ -172,25 +196,27 @@
         <li><strong>Integration Scenarios</strong> – Connect SnapLogic to a wide range of enterprise applications including CRM systems, ERP platforms, REST APIs, relational databases, and both on-premise and cloud-based solutions</li>
         <li><strong>Hands-On Labs</strong> – Practice what you learn through guided, real-world exercises that simulate enterprise scenarios. Our labs are designed to build confidence, reinforce concepts, and prepare you for actual project delivery</li>
       </ul>
-      <a href="mailto:ssai@example.com" class="cta-button">Register Your Interest</a>
+      <a href="mailto:ssai@example.com" class="cta-button" tabindex="0">Register Your Interest</a>
     </section>
 
     <section id="why">
-      <h2>Why Choose Us</h2>
+      <h2><i class="fas fa-star"></i> Why Choose Us</h2>
       <p>Tech Mastery Zone stands apart from generic training platforms. We combine deep technical expertise with real-world delivery experience to offer unmatched value:</p>
       <ul>
         <li><strong>Proven Track Record</strong> – Successfully delivered training programs for corporate teams and individual professionals across industries</li>
         <li><strong>Tailored Learning</strong> – We adapt our content to suit diverse learner needs—from freshers to experienced architects</li>
         <li><strong>Exclusive Hands-On Labs</strong> – Unlike most platforms, we provide guided, real-world lab exercises that simulate enterprise scenarios and build true project readiness</li>
+        <li><strong>Consulting-Grade Expertise</
         <li><strong>Consulting-Grade Expertise</strong> – Our trainers are practicing consultants who bring field-tested insights into every module</li>
         <li><strong>End-to-End Support</strong> – From interview prep to project delivery, we’re your strategic partner in career growth</li>
       </ul>
     </section>
 
     <section id="contact" class="contact">
-      <h2>Contact</h2>
-      <p>Email: <a href="mailto:ssai@example.com">ssai@example.com</a></p>
-      <p>LinkedIn: <a href="https://linkedin.com/in/yourprofile" target="_blank">yourprofile</a></p>
+      <h2><i class="fas fa-envelope"></i> Contact</h2>
+      <p>Email: <a href="mailto:ssai@example.com" tabindex="0">ssai@example.com</a></p>
+      <p>LinkedIn: <a href="https://linkedin.com/in/yourprofile" target="_blank" tabindex="0">yourprofile</a></p>
+      <p><strong>Alt text note:</strong> If you add a logo or team photo, include <code>alt="Team photo of Tech Mastery Zone"</code> for accessibility.</p>
     </section>
   </main>
 
