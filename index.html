@@ -18,18 +18,18 @@
 
     body {
       font-family: 'Segoe UI', sans-serif;
-      font-size: 18px;
+      font-size: 19px;
       margin: 0;
       padding: 0;
       background-color: var(--bg);
       color: var(--text);
-      line-height: 1.8;
+      line-height: 1.9;
     }
 
     header {
       background: linear-gradient(to right, var(--primary), var(--accent));
       color: var(--white);
-      padding: 50px 20px;
+      padding: 60px 20px;
       text-align: center;
     }
 
@@ -40,8 +40,11 @@
 
     nav {
       background-color: var(--primary);
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
       padding: 15px;
-      text-align: center;
       position: sticky;
       top: 0;
       z-index: 1000;
@@ -49,16 +52,15 @@
 
     nav a {
       color: var(--white);
-      margin: 0 20px;
       text-decoration: none;
       font-weight: bold;
-      font-size: 18px;
-      padding: 10px;
+      font-size: 19px;
+      padding: 10px 15px;
+      border-radius: 5px;
     }
 
     nav a:hover {
       background-color: var(--accent);
-      border-radius: 5px;
     }
 
     .hero {
@@ -70,7 +72,7 @@
       align-items: center;
       justify-content: center;
       color: white;
-      font-size: 28px;
+      font-size: 30px;
       font-weight: bold;
       text-shadow: 1px 1px 4px rgba(0,0,0,0.6);
     }
@@ -96,9 +98,17 @@
       background-color: #f7fbff;
     }
 
+    h1 {
+      font-size: 36px;
+    }
+
     h2 {
-      font-size: 28px;
+      font-size: 30px;
       margin-bottom: 15px;
+    }
+
+    p {
+      margin-bottom: 20px;
     }
 
     ul {
@@ -165,9 +175,9 @@
     }
 
     @media (max-width: 600px) {
-      nav a {
-        display: block;
-        margin: 10px 0;
+      nav {
+        flex-direction: column;
+        align-items: center;
       }
       main {
         padding: 20px;
@@ -228,7 +238,6 @@
       </ul>
       <a href="mailto:ssai@example.com" class="cta-button" tabindex="0">Register Your Interest</a>
     </section>
-
     <section id="why">
       <h2><i class="fas fa-star"></i> Why Choose Us</h2>
       <p>Tech Mastery Zone stands apart from generic training platforms. We combine deep technical expertise with real-world delivery experience to offer unmatched value:</p>
@@ -244,8 +253,6 @@
     <section id="contact" class="contact">
       <h2><i class="fas fa-envelope"></i> Contact</h2>
       <p>Email: <a href="mailto:ssai@example.com" tabindex="0">ssai@example.com</a></p>
-      <p>LinkedIn: <a href="https://linkedin.com/in/yourprofile" target="_blank" tabindex="0">yourprofile</a></p>
-      <p><strong>Alt text note:</strong> If you add a logo or team photo, include <code>alt="Team photo of Tech Mastery Zone"</code> for accessibility.</p>
     </section>
   </main>
 
@@ -254,7 +261,7 @@
   </div>
 
   <footer>
-    &copy; 2025 Tech Mastery Zone. Built with ❤️ by ssai.
+    &copy; 2025 Tech Mastery Zone. Built with ❤️ by S.
   </footer>
 </body>
 </html>
